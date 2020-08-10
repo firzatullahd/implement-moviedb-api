@@ -23,7 +23,7 @@ async function showMovies() {
 }
 
 function getMovieDetail(imdbid) {
-    return fetch(`http://www.omdbapi.com/?apikey=5beca760&i=${imdbid}`)
+    return fetch(`https://www.omdbapi.com/?apikey=5beca760&i=${imdbid}`)
         .then(response => response.json())
         .then(m => m);
 }
@@ -35,7 +35,7 @@ function updateUIDetail(m) {
 }
 
 function getMovies(keyword) {
-    return fetch(`http://www.omdbapi.com/?apikey=5beca760&s=${keyword}`)
+    return fetch(`https://www.omdbapi.com/?apikey=5beca760&s=${keyword}`)
         .then(response => response.json())
         .then(response => response.Search);
 }
